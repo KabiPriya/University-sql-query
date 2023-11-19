@@ -130,7 +130,7 @@ All the informations needed for the semester April, 2023
 -----------------------------------------------------------------
 
 -----------------------------------------------------------------
-1.get students count college wise:
+1.Get students count college wise:
 -----------------------------------------------------------------
 
 SELECT college_name, COUNT(student_id) AS student_count
@@ -147,7 +147,7 @@ FROM college c;
 ![Alt text](image.png)
 
 ------------------------------------------------------------------
-2.get students count course wise:
+2.Get students count course wise:
 ------------------------------------------------------------------
 
 SELECT course_name,(SELECT COUNT(*) 
@@ -159,7 +159,7 @@ FROM course co;
 ![Alt text](image-1.png)
 
 -----------------------------------------------------------------
-3.get the university rank holder across all courses(1 student):
+3.Get the university rank holder across all courses(1 student):
 -----------------------------------------------------------------
 
 SELECT m.student_id, s.student_name, 
@@ -177,6 +177,8 @@ FROM ( SELECT AVG(marks)
 AS avg_marks 
 FROM marks 
 GROUP BY student_id ) AS max_avg );
+
+![Alt text](image-2.png)
 
 -----------------------------------------------------------------
 4.get the list of rank holders each course:
