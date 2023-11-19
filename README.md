@@ -1,5 +1,10 @@
 # University database
 
+# TO CREATE UNIVERSITY DATABASE
+
+-CREATE DATABASE university
+-\l university
+
 CREATE TABLE university (university_id SERIAL PRIMARY KEY, university_name VARCHAR);
 
 CREATE TABLE college (college_id SERIAL PRIMARY KEY,college_name VARCHAR,university_id 
