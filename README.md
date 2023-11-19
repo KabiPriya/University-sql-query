@@ -36,7 +36,7 @@ student_id integer references student(student_id),
 semester_id integer references semester(semester_id),
 marks integer, subject_id INTEGER REFERENCES subject(subject_id));
 
-
+# TO INSERT DATA IN UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND  MARK TABLES:
 insert into university(university_name)
 values('Pondicherry University');
 
