@@ -1,6 +1,6 @@
 # UNIVERSITY SQL DATABASE
 
-#TASK 1:
+# TASK 1:
 -----------------------------------------------------------------
 - Build a University students ranking system database.
 - University will have multiple colleges
