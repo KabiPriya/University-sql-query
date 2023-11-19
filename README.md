@@ -110,8 +110,9 @@ values(6,1,70,1),(6,1,79,2),(6,1,85,3),(6,1,49,4),(6,1,30,5),
 All the informations needed for the semester April, 2023
 -----------------------------------------------------------------
 
+-----------------------------------------------------------------
 1.get students count college wise:
-
+-----------------------------------------------------------------
 SELECT college_name, COUNT(student_id) AS student_count
 FROM college
 LEFT JOIN student ON college.college_id = student.college_id
