@@ -1,35 +1,37 @@
-# University database
+# UNIVERSITY SQL DATABASE
 
-# TO CREATE UNIVERSITY DATABASE
+# TO CREATE UNIVERSITY DATABASE:
 
--CREATE DATABASE university
--\l university
+- CREATE DATABASE university
+- \l university
+   
+# TO CREATE TABLE FOR UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT , MARK:
 
-CREATE TABLE university (university_id SERIAL PRIMARY KEY, university_name VARCHAR);
+- CREATE TABLE university (university_id SERIAL PRIMARY KEY, university_name VARCHAR);
 
-CREATE TABLE college (college_id SERIAL PRIMARY KEY,college_name VARCHAR,university_id 
+- CREATE TABLE college (college_id SERIAL PRIMARY KEY,college_name VARCHAR,university_id 
 INTEGER REFERENCES university(university_id));
 
-CREATE TABLE course ( course_id SERIAL PRIMARY KEY, course_name VARCHAR);
+- CREATE TABLE course ( course_id SERIAL PRIMARY KEY, course_name VARCHAR);
 
-CREATE TABLE college_course (college_course_id SERIAL PRIMARY KEY, 
+- CREATE TABLE college_course (college_course_id SERIAL PRIMARY KEY, 
 college_id INTEGER REFERENCES college(college_id),course_id INTEGER REFERENCES course(course_id));
 
-create TABLE subject(subject_id serial primary key not null ,subject_name VARCHAR not null);
+- CREATE TABLE subject(subject_id serial primary key not null ,subject_name VARCHAR not null);
 
-CREATE TABLE course_subject(course_subject_id SERIAL PRIMARY KEY NOT NULL, 
+- CREATE TABLE course_subject(course_subject_id SERIAL PRIMARY KEY NOT NULL, 
 subject_id INTEGER REFERENCES subject(subject_id),course_id INTEGER REFERENCES course(course_id));
 
-create TABLE semester(semester_id  SERIAL PRIMARY KEY NOT NULL,
+- CREATE TABLE semester(semester_id  SERIAL PRIMARY KEY NOT NULL,
 sem_month VARCHAR NOT null,sem_year INTEGER NOT null);
 
-create TABLE student(student_id serial primary key not null,
+- CREATE TABLE student(student_id serial primary key not null,
 student_name VARCHAR not null,dob date,phone  bigint, place VARCHAR, 
 college_id INTEGER REFERENCES college(college_id),
 course_id INTEGER REFERENCES course(course_id),joined_year integer);
 
 
-create TABLE marks(mark_id serial primary key not null,
+- CREATE TABLE marks(mark_id serial primary key not null,
 student_id integer references student(student_id),
 semester_id integer references semester(semester_id),
 marks integer, subject_id INTEGER REFERENCES subject(subject_id));
