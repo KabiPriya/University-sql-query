@@ -156,6 +156,8 @@ WHERE s.course_id = co.course_id)
 AS student_count
 FROM course co;
 
+![Alt text](image-1.png)
+
 -----------------------------------------------------------------
 3.get the university rank holder across all courses(1 student):
 -----------------------------------------------------------------
