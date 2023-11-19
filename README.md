@@ -113,18 +113,21 @@ All the informations needed for the semester April, 2023
 -----------------------------------------------------------------
 1.get students count college wise:
 -----------------------------------------------------------------
+
 SELECT college_name, COUNT(student_id) AS student_count
 FROM college
 LEFT JOIN student ON college.college_id = student.college_id
 GROUP BY college_name;
-
+                           (OR)
 SELECT college_name,(SELECT COUNT(*) 
 FROM student s 
 WHERE s.college_id = c.college_id) 
 AS student_count
 FROM college c;
 
+------------------------------------------------------------------
 2.get students count course wise:
+------------------------------------------------------------------
 
 SELECT course_name,(SELECT COUNT(*) 
 FROM student s 
@@ -132,7 +135,9 @@ WHERE s.course_id = co.course_id)
 AS student_count
 FROM course co;
 
+-----------------------------------------------------------------
 3.get the university rank holder across all courses(1 student):
+-----------------------------------------------------------------
 
 SELECT m.student_id, s.student_name, 
 AVG(m.marks) AS cgp,co.course_name, c.college_name 
@@ -150,7 +155,9 @@ AS avg_marks
 FROM marks 
 GROUP BY student_id ) AS max_avg );
 
+-----------------------------------------------------------------
 4.get the list of rank holders each course:
+-----------------------------------------------------------------
 
 WITH CourseRankHolders AS (
   SELECT
@@ -180,8 +187,10 @@ FROM
 WHERE
   rank_num = 1;
  
+ -----------------------------------------------------------------
  5.get the college topper across all courses:
- 
+ -----------------------------------------------------------------
+
 WITH CollegeRankHolders AS (
 SELECT
     s.student_id,
@@ -211,7 +220,9 @@ FROM
 WHERE
   rank_num = 1;
 
+-----------------------------------------------------------------
 6.get the college toppers each course:
+-----------------------------------------------------------------
 
 SELECT student_id,student_name,college_name ,course_name,cgp AS avg_marks
 FROM(SELECT m.student_id ,s.student_name, c.college_name,co.course_name, 
@@ -225,7 +236,9 @@ JOIN course co ON co.course_id = s.course_id
 GROUP BY m.student_id ,s.student_name, c.college_name,co.course_id,c.college_id  ,co.course_name) course_rank
 WHERE ranking =1;
 
+-----------------------------------------------------------------
 7.get the failed students count each subject:
+-----------------------------------------------------------------
 
 SELECT s.subject_name, COUNT(m.student_id) AS num_failed_students
 FROM marks m
@@ -233,7 +246,9 @@ JOIN subject s ON m.subject_id = s.subject_id
 WHERE m.marks < 35
 GROUP BY s.subject_name;
 
+-----------------------------------------------------------------
 8.get over all students list with semester marks:
+-----------------------------------------------------------------
 
 SELECT m.student_id, s.student_name, AVG(m.marks) AS cgp,co.course_name,sem.sem_month,sem.sem_year
 FROM marks m
@@ -243,8 +258,9 @@ join semester sem ON sem.semester_id = m.semester_id
 where sem.sem_month ='april' AND sem.sem_year =2023
 GROUP BY m.student_id,s.student_name,co.course_name,sem.sem_month,sem.sem_year;
 
+-----------------------------------------------------------------
 9.get the student list who wasnt appear to the exams:
-
+-----------------------------------------------------------------
 SELECT
   s.student_id,
   s.student_name
@@ -258,5 +274,5 @@ WHERE
   );
 
 
-
+---------------------------------------------------------------------------------------------------------
 
