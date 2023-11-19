@@ -1,11 +1,27 @@
 # UNIVERSITY SQL DATABASE
 
-# TO CREATE UNIVERSITY DATABASE:
+#TASK 1:
+-----------------------------------------------------------------
+- Build a University students ranking system database.
+- University will have multiple colleges
+- Each college will have many courses,
+- Each Courses will have many subject
+- The university follows semester pattern
+- Need to store the marks for each subject , semester wise
+- design the table structure and relationships
+- feed necessary data to query the output
+-----------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+TO CREATE UNIVERSITY DATABASE:
+---------------------------------------------------------------------------------------------------------
 
 - CREATE DATABASE university
 - \l university
    
-# TO CREATE TABLE FOR UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND MARK:
+---------------------------------------------------------------------------------------------------------
+TO CREATE TABLE FOR UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND MARK:
+---------------------------------------------------------------------------------------------------------
 
 - CREATE TABLE university (university_id SERIAL PRIMARY KEY, university_name VARCHAR);
 
@@ -36,7 +52,9 @@ student_id integer references student(student_id),
 semester_id integer references semester(semester_id),
 marks integer, subject_id INTEGER REFERENCES subject(subject_id));
 
-# TO INSERT DATA IN UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND  MARK TABLES:
+---------------------------------------------------------------------------------------------------------
+ TO INSERT DATA IN UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND  MARK TABLES:
+---------------------------------------------------------------------------------------------------------
 
 - insert into university(university_name)
 values('Pondicherry University');
@@ -61,7 +79,7 @@ values('DBMS'),('C programming language'),('Digital Electronics'),('Public Admin
 
 - insert into semester(sem_month,sem_year)
 values ('april',2023);
-
+---------------------------------------------------------------------------------------------------------
 - insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
 values('John','2001-04-11',9092434586,'Puducherry',1,1,2022),
 ('Michael','2001-03-03',9392434596,'Puducherry',2,2,2022),
@@ -69,17 +87,17 @@ values('John','2001-04-11',9092434586,'Puducherry',1,1,2022),
 ('Gwen','2001-07-19',8765897654,'Puducherry',4,4,2022),
 ('Lucy','2001-12-01',6876543278,'chennai',5,5,2022);
 
-insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
+- insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
 values('Elsa','2001-05-08',9093454586,'Coimbatore',1,1,2022),
 ('Nelson','2000-04-24',9390834596,'Banglore',2,2,2022),
 ('Jenna','2000-11-30',6376453765,'Puducherry',3,3,2022),
 ('Ritu','2001-02-25',8765823454,'Puducherry',4,4,2022),
 ('Stephen','2001-10-22',6812343278,'chennai',5,5,2022);
 
-insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
+- insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
 values('Ruby','2001-02-28',6493454586,'Coimbatore',1,1,2022),
 ('Rohit','2000-10-31',6390834596,'Banglore',2,2,2022);
-
+---------------------------------------------------------------------------------------------------------
 - insert into marks(student_id,semester_id,marks,subject_id) 
 values(1,1,90,1),(1,1,99,2),(1,1,95,3),(1,1,89,4),(1,1,95,5),
 (2,1,80,6),(2,1,89,7),(2,1,85,8),(2,1,89,9),(2,1,85,10),
@@ -93,7 +111,7 @@ values(6,1,70,1),(6,1,79,2),(6,1,85,3),(6,1,49,4),(6,1,30,5),
 (8,1,76,11),(8,1,79,12),(8,1,56,13),(8,1,55,14),(8,1,65,15),
 (9,1,40,16),(9,1,89,17),(9,1,95,18),(9,1,59,19),(9,1,75,20),
 (10,1,90,1),(10,1,49,2),(10,1,25,3),(10,1,59,4),(10,1,85,5);
-
+---------------------------------------------------------------------------------------------------------
 # TASK 2:
 
 # Querys
