@@ -96,6 +96,20 @@ values(6,1,70,1),(6,1,79,2),(6,1,85,3),(6,1,49,4),(6,1,30,5),
 
 # TASK 2:
 
+# Querys
+-----------------------------------------------------------------
+- get students count college wise
+- get students count in a college, course wise
+- get the university rank holder across all courses(1 student)
+- get the list of rank holders each course
+- get the college topper across all courses
+- get the college toppers each course
+- get the failed students count each subject 
+- get over all students list with semester marks
+- get the student list who wasnt appear to the exams
+All the informations needed for the semester April, 2023
+-----------------------------------------------------------------
+
 1.get students count college wise:
 
 SELECT college_name, COUNT(student_id) AS student_count
