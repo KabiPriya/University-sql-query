@@ -148,9 +148,13 @@ FROM college c;
     college_name     | student_count
 ------------------------------------
  Idhaya              |             3
+ 
  Bharathidhasan      |             3
+
  Tagore Arts         |             2
+
  Saradha Gangatharan |             2
+ 
  Achariya            |             2
 (5 rows)
 
