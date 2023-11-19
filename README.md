@@ -181,7 +181,7 @@ GROUP BY student_id ) AS max_avg );
 ![Alt text](image-2.png)
 
 -----------------------------------------------------------------
-4.get the list of rank holders each course:
+4.Get the list of rank holders each course:
 -----------------------------------------------------------------
 
 WITH CourseRankHolders AS (
@@ -212,8 +212,10 @@ FROM
 WHERE
   rank_num = 1;
  
+ ![Alt text](image-3.png)
+
  -----------------------------------------------------------------
- 5.get the college topper across all courses:
+ 5.Get the college topper across all courses:
  -----------------------------------------------------------------
 
 WITH CollegeRankHolders AS (
