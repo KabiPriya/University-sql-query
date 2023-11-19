@@ -37,31 +37,32 @@ semester_id integer references semester(semester_id),
 marks integer, subject_id INTEGER REFERENCES subject(subject_id));
 
 # TO INSERT DATA IN UNIVERSITY , COLLEGE, COURSE , COLLEGE_COURSE , SUBJECT , COURSE_SUBJECT ,    SEMESTER, STUDENT AND  MARK TABLES:
-insert into university(university_name)
+
+- insert into university(university_name)
 values('Pondicherry University');
 
-insert into college(college_name,university_id)
+- insert into college(college_name,university_id)
 values('Idhaya',1),('Bharathidhasan',1),('Tagore Arts',1),('Saradha Gangatharan',1),('Achariya',1);
 
-insert into course(course_name)
+- insert into course(course_name)
 values('B.Sc. Computer Science'),('B.Sc. Mathematics'),('B.Sc. Physics'),('B.Sc. Chemistry'),('BCA');
 
-insert into subject(subject_name)
+- insert into subject(subject_name)
 values('DBMS'),('C programming language'),('Digital Electronics'),('Public Administration'),('Mathematics'),('Trignometry'),
 ('Differential'),('Calculus'),('Algebra'),('Discrete mathematics'),('Thermodynamics and Statistical Mechanics'),('Electromagnetism and Photonics'),
 ('Relativistic Mechanics'),('Condensed Matter Physics'),('High-energy Particle Physics and Nuclear Physics'),('Inorganic Chemistry'),('Organic Chemistry'),
 ('Physical Chemistry'),('Application of Computer in Chemistry'),('Analytical Methods in Chemistry');
 
-insert into college_course(college_id,course_id) values(1,1),(1,2),(1,3),(1,4),(1,5),(2,1),(2,2),(2,3),(2,4),(2,5),
+- insert into college_course(college_id,course_id) values(1,1),(1,2),(1,3),(1,4),(1,5),(2,1),(2,2),(2,3),(2,4),(2,5),
 (3,1),(3,2),(3,3),(3,4),(3,5),(4,1),(4,2),(4,3),(4,4),(4,5),(5,1),(5,2),(5,3),(5,4),(5,5);
 
-insert into course_subject(subject_id,course_id) values(1,1),(2,1),(3,1),(4,1),(5,1),(6,2),(7,2),(8,2),(9,2),(10,2),(11,3),(12,3),(13,3),(14,3)
+- insert into course_subject(subject_id,course_id) values(1,1),(2,1),(3,1),(4,1),(5,1),(6,2),(7,2),(8,2),(9,2),(10,2),(11,3),(12,3),(13,3),(14,3)
 ,(15,3),(16,4),(17,4),(18,4),(19,4),(20,4),(1,5),(2,5),(3,5),(4,5),(5,5);
 
-insert into semester(sem_month,sem_year)
+- insert into semester(sem_month,sem_year)
 values ('april',2023);
 
-insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
+- insert into student(student_name,dob,phone,place,college_id,course_id,joined_year) 
 values('John','2001-04-11',9092434586,'Puducherry',1,1,2022),
 ('Michael','2001-03-03',9392434596,'Puducherry',2,2,2022),
 ('Peter','2000-11-04',9876453765,'Puducherry',3,3,2022),
@@ -79,7 +80,7 @@ insert into student(student_name,dob,phone,place,college_id,course_id,joined_yea
 values('Ruby','2001-02-28',6493454586,'Coimbatore',1,1,2022),
 ('Rohit','2000-10-31',6390834596,'Banglore',2,2,2022);
 
-insert into marks(student_id,semester_id,marks,subject_id) 
+- insert into marks(student_id,semester_id,marks,subject_id) 
 values(1,1,90,1),(1,1,99,2),(1,1,95,3),(1,1,89,4),(1,1,95,5),
 (2,1,80,6),(2,1,89,7),(2,1,85,8),(2,1,89,9),(2,1,85,10),
 (3,1,70,11),(3,1,79,12),(3,1,85,13),(3,1,79,14),(3,1,75,15),
