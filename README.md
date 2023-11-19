@@ -250,7 +250,7 @@ WHERE
 ![Alt text](image-4.png)
 
 -----------------------------------------------------------------
-6.get the college toppers each course:
+6.Get the college toppers each course:
 -----------------------------------------------------------------
 
 SELECT student_id,student_name,college_name ,course_name,cgp AS avg_marks
@@ -264,6 +264,8 @@ JOIN college c ON c.college_id = s.college_id
 JOIN course co ON co.course_id = s.course_id 
 GROUP BY m.student_id ,s.student_name, c.college_name,co.course_id,c.college_id  ,co.course_name) course_rank
 WHERE ranking =1;
+
+![Alt text](image-5.png)
 
 -----------------------------------------------------------------
 7.get the failed students count each subject:
