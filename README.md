@@ -144,16 +144,16 @@ WHERE s.college_id = c.college_id)
 AS student_count
 FROM college c;
 
--------------------------------------
+
     college_name     | student_count
----------------------+---------------
+------------------------------------
  Idhaya              |             3
  Bharathidhasan      |             3
  Tagore Arts         |             2
  Saradha Gangatharan |             2
  Achariya            |             2
 (5 rows)
---------------------------------------
+
 
 ------------------------------------------------------------------
 2.get students count course wise:
