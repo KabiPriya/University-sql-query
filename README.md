@@ -268,7 +268,7 @@ WHERE ranking =1;
 ![Alt text](image-5.png)
 
 -----------------------------------------------------------------
-7.get the failed students count each subject:
+7.Get the failed students count each subject:
 -----------------------------------------------------------------
 
 SELECT s.subject_name, COUNT(m.student_id) AS num_failed_students
@@ -277,8 +277,10 @@ JOIN subject s ON m.subject_id = s.subject_id
 WHERE m.marks < 35
 GROUP BY s.subject_name;
 
+![Alt text](image-6.png)
+
 -----------------------------------------------------------------
-8.get over all students list with semester marks:
+8.Get over all students list with semester marks:
 -----------------------------------------------------------------
 
 SELECT m.student_id, s.student_name, AVG(m.marks) AS cgp,co.course_name,sem.sem_month,sem.sem_year
@@ -289,8 +291,10 @@ join semester sem ON sem.semester_id = m.semester_id
 where sem.sem_month ='april' AND sem.sem_year =2023
 GROUP BY m.student_id,s.student_name,co.course_name,sem.sem_month,sem.sem_year;
 
+![Alt text](image-7.png)
+
 -----------------------------------------------------------------
-9.get the student list who wasnt appear to the exams:
+9.Get the student list who wasnt appear to the exams:
 -----------------------------------------------------------------
 SELECT
   s.student_id,
@@ -304,6 +308,7 @@ WHERE
     WHERE m.student_id = s.student_id
   );
 
+![Alt text](image-8.png)
 
 ---------------------------------------------------------------------------------------------------------
 
