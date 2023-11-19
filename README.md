@@ -247,7 +247,35 @@ FROM
 WHERE
   rank_num = 1;
 
-![Alt text](image-4.png)
+                                          (OR)
+
+WITH CollegeRankHolders AS (
+  SELECT
+    s.student_id,
+    s.student_name,
+    c.college_id,
+    c.college_name,
+    AVG(m.marks) AS cgp,
+    RANK() OVER (ORDER BY AVG(m.marks) DESC) AS rank_num
+  FROM
+    marks m
+    JOIN student s ON s.student_id = m.student_id
+    JOIN college c ON c.college_id = s.college_id
+  GROUP BY
+    s.student_id, s.student_name, c.college_id, c.college_name
+)
+SELECT
+  student_id,
+  student_name,
+  college_name,
+  cgp
+FROM
+  CollegeRankHolders
+WHERE
+  rank_num = 1;
+
+
+![Alt text](image-9.png)
 
 -----------------------------------------------------------------
 6.Get the college toppers each course:
