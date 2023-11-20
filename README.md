@@ -350,3 +350,6 @@ WHERE
 - alter all the tables add audit columns (createdAt,createBy,updatedAt,updatedBy)
 - remove the duplicate values in the mark table(insert values for your convenient)
 
+6.)remove the duplicate values in the mark table(insert values for your convenient)
+
+
