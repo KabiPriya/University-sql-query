@@ -348,3 +348,5 @@ WHERE
 - choose any select query from tast 2 and insert the values into a temp table
 - delete a college and its respective things
 - alter all the tables add audit columns (createdAt,createBy,updatedAt,updatedBy)
+- remove the duplicate values in the mark table(insert values for your convenient)
+
