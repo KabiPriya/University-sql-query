@@ -341,5 +341,6 @@ WHERE
 ---------------------------------------------------------------------------------------------------------
 # TASK 3:
 
-# Query
+# Querys
 
+- update the mark to 40 those who were scored the marks between 35 to 39
