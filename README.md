@@ -338,7 +338,7 @@ WHERE
 
 ![Alt text](image-8.png)
 
----------------------------------------------------------------------------------------------------------
+<!-- ---------------------------------------------------------------------------------------------------------
 # TASK 3:
 
 # Querys
@@ -349,5 +349,5 @@ WHERE
 - delete a college and its respective things
 - alter all the tables add audit columns (createdAt,createBy,updatedAt,updatedBy)
 - remove the duplicate values in the mark table(insert values for your convenient)
-
+ -->
 
