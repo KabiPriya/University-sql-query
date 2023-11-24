@@ -344,7 +344,7 @@ WHERE
 # Querys
 
 - update the mark to 40 those who were scored the marks between 35 to 39
-- get the history of marks that are changed
+
 - choose any select query from tast 2 and insert the values into a temp table
 - delete a college and its respective things
 - alter all the tables add audit columns (createdAt,createBy,updatedAt,updatedBy)
