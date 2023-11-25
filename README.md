@@ -324,7 +324,7 @@ GROUP BY m.student_id,s.student_name,co.course_name,sem.sem_month,sem.sem_year;
 -----------------------------------------------------------------
 9.Get the student list who wasnt appear to the exams:
 -----------------------------------------------------------------
-SELECT
+<!-- SELECT
   s.student_id,
   s.student_name
 FROM
@@ -336,7 +336,7 @@ WHERE
     WHERE m.student_id = s.student_id
   );
 
-![Alt text](image-8.png)
+![Alt text](image-8.png) -->
 
 ---------------------------------------------------------------------------------------------------------
 # TASK 3:
