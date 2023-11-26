@@ -310,7 +310,7 @@ GROUP BY s.subject_name;
 -----------------------------------------------------------------
 8.Get over all students list with semester marks:
 -----------------------------------------------------------------
-<!-- 
+
 SELECT m.student_id, s.student_name, AVG(m.marks) AS cgp,co.course_name,sem.sem_month,sem.sem_year
 FROM marks m
 join student s ON s.student_id = m.student_id 
@@ -319,7 +319,7 @@ join semester sem ON sem.semester_id = m.semester_id
 where sem.sem_month ='april' AND sem.sem_year =2023
 GROUP BY m.student_id,s.student_name,co.course_name,sem.sem_month,sem.sem_year;
 
-![Alt text](image-7.png) -->
+![Alt text](image-7.png)
 
 -----------------------------------------------------------------
 9.Get the student list who wasnt appear to the exams:
