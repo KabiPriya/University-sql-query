@@ -299,13 +299,13 @@ WHERE ranking =1;
 7.Get the failed students count each subject:
 -----------------------------------------------------------------
 
-SELECT s.subject_name, COUNT(m.student_id) AS num_failed_students
+<!-- SELECT s.subject_name, COUNT(m.student_id) AS num_failed_students
 FROM marks m
 JOIN subject s ON m.subject_id = s.subject_id
 WHERE m.marks < 35
 GROUP BY s.subject_name;
 
-![Alt text](image-6.png)
+![Alt text](image-6.png) -->
 
 -----------------------------------------------------------------
 8.Get over all students list with semester marks:
